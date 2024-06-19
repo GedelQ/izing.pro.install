@@ -143,27 +143,27 @@ EOF
 
 
 
-verificar_senha() {
-  print_banner
-  printf "${WHITE} 💻 Verificando usuario e senha...${GRAY_LIGHT}"
-  printf "\n\n"
+# verificar_senha() {
+#   print_banner
+#   printf "${WHITE} 💻 Verificando usuario e senha...${GRAY_LIGHT}"
+#   printf "\n\n"
 
-  sleep 2
+#   sleep 2
 
-  sudo su - root <<EOF
-  rm teste.txt > /dev/null
-  wget -q --user ${username_down} --password ${senha_down} https://a.infomeurer.com.br/restrito/teste.txt
+#   sudo su - root <<EOF
+#   rm teste.txt > /dev/null
+#   wget -q --user ${username_down} --password ${senha_down} https://a.infomeurer.com.br/restrito/teste.txt
   
-if [ ! -f teste.txt ]; then
-    echo -e "\033[1;31mSerá que sua senha está correta? Pode estar vencida?\033[0m"
-	echo -e "\033[1;31mAperte Ctrl + c para sair\033[0m"
-sleep 99999999
-fi
+# if [ ! -f teste.txt ]; then
+#     echo -e "\033[1;31mSerá que sua senha está correta? Pode estar vencida?\033[0m"
+# 	echo -e "\033[1;31mAperte Ctrl + c para sair\033[0m"
+# sleep 99999999
+# fi
 
-EOF
+# EOF
 
-  sleep 2
-}
+#   sleep 2
+# }
 
 
 #######################################
