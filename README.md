@@ -31,7 +31,8 @@ apt install git
 cd /root
 ```
 ```bash
-git clone https://github.com/cleitonme/izing.pro.install.git izinginstalador
+git clone https://github.com/GedelQ/izing.pro.install.git izinginstalador
+
 ```
 ```bash
 sudo chmod +x ./izinginstalador/izing
