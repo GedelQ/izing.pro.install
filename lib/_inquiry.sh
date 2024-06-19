@@ -14,19 +14,19 @@ get_backend_url() {
   read -p "> " backend_url
 }
 
-get_usuario() {
-  print_banner
-  printf "${WHITE} 💻 Digite o nome de usuario recebido na compra:${GRAY_LIGHT}"
-  printf "\n\n"
-  read -p "> " username_down
-}
+# get_usuario() {
+#   print_banner
+#   printf "${WHITE} 💻 Digite o nome de usuario recebido na compra:${GRAY_LIGHT}"
+#   printf "\n\n"
+#   read -p "> " username_down
+# }
 
-get_senha() {
-  print_banner
-  printf "${WHITE} 💻 Digite a senha recebida na compra:${GRAY_LIGHT}"
-  printf "\n\n"
-  read -p "> " senha_down
-}
+# get_senha() {
+#   print_banner
+#   printf "${WHITE} 💻 Digite a senha recebida na compra:${GRAY_LIGHT}"
+#   printf "\n\n"
+#   read -p "> " senha_down
+# }
 
 get_urls() {
   get_frontend_url
