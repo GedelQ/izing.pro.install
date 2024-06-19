@@ -107,23 +107,41 @@ EOF
 # Arguments:
 #   None
 #######################################
+# system_unzip_izing() {
+#   print_banner
+#   printf "${WHITE} 💻 Fazendo unzip izing...${GRAY_LIGHT}"
+#   printf "\n\n"
+
+#   sleep 2
+
+#   sudo su - deploy <<EOF
+#   cd /home/deploy/  
+#   wget -q --user ${username_down} --password ${senha_down} https://a.infomeurer.com.br/restrito/izing.zip
+#   unzip izing.zip
+#   chmod 775 izing.io/ -Rf
+#   rm izing.zip
+# EOF
+
+#   sleep 2
+# }
+
 system_unzip_izing() {
-  print_banner
-  printf "${WHITE} 💻 Fazendo unzip izing...${GRAY_LIGHT}"
-  printf "\n\n"
-
-  sleep 2
-
-  sudo su - deploy <<EOF
-  cd /home/deploy/  
-  wget -q --user ${username_down} --password ${senha_down} https://a.infomeurer.com.br/restrito/izing.zip
-  unzip izing.zip
-  chmod 775 izing.io/ -Rf
-  rm izing.zip
+    print_banner
+    printf "${WHITE} Clonando o repositório do Izing...${GRAY_LIGHT}"
+    printf "\n\n"
+    sleep 2
+    sudo su - deploy <<EOF
+cd /home/deploy/
+# Remova qualquer diretório existente
+rm -rf izing.io
+# Clone o repositório Git público
+git clone https://github.com/GedelQ/izing1111.git izing.io
+chmod 775 izing.io/ -Rf
 EOF
-
-  sleep 2
+    sleep 2
 }
+
+
 
 verificar_senha() {
   print_banner
